@@ -7,5 +7,7 @@ constructor(client) {
       client.sendText(message.from, '👋 Hello from sulla!');
     }
   }
+  init() {
+  }
 }
 export {comcloudbot}
