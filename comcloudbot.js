@@ -12,3 +12,4 @@ switch (cmd[0]) {
             x.push(cmd[1])
             client.send(message.from,x)
             break;
+}
