@@ -19,6 +19,7 @@ switch (cmd[0]) {
             if(isNaN(cmd[1])) cmd[1]=1;
             let page = (cmd[1]>wiki.length)?1:cmd[1];
             client.sendText(message.from,wiki[page - 1]);
+            break;
       case "Hi":
              client.sendText(message.from,"Hi! 😀");
             break;
