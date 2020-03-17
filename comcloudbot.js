@@ -12,8 +12,8 @@ var wiki = [
 
 switch (cmd[0]) {
       case "!add":
-            data.store.push(x)
-            client.sendText(message.from,JSON.stringify(data));
+            data.store+=x
+            client.sendText(message.from,data.store);
             break;
       case "!help":
             let page = (cmd[1]>wiki.length)?1:cmd[1];
