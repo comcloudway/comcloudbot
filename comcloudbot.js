@@ -17,6 +17,6 @@ switch (cmd[0]) {
             client.sendText(message.from,x);
             break;
       case "!help":
-            //let page = (cmd[1]>wiki.length)?1:cmd[1];
-            client.sendText(message.from,wiki[0]);
+            let page = (cmd[1]>wiki.length)?1:cmd[1];
+            client.sendText(message.from,wiki[page - 1]);
 }
