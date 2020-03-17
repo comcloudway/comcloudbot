@@ -12,6 +12,19 @@ var wiki = [
       `Wiki 1\ntest`,`Wiki 2`
 ];
 
+var emoji = [
+      ["😇","😈"],
+      ["🥶","🥵"],
+      ["😠","😂"],
+      ["🤦‍♀️","🤦‍♂️"],
+      ["🤬","🤣 "],
+      ["😁","☹️"],
+      ["😖","😄"],
+      ["🙃","🙂"],
+      ["😏","😒"],
+      ["🤪","😜"]
+]
+
  cmd = message.body.split(" ");
 
 switch (cmd[0]) {
@@ -21,6 +34,23 @@ switch (cmd[0]) {
             client.sendText(message.from,wiki[page - 1]);
             break;
       case "Hi":
-             client.sendText(message.from,"Hi! 😀");
+            let s = "😀"
+            for(let e of emoji) {
+                  if(e[0]==cmd[1]){
+                        s=e[1]
+                        break;
+                  } else if(e[1]==cmd[1]) {
+                        s=e[0]
+                        break;
+                  }
+            }
+             client.sendText(message.from,"Hi! "+s);
             break;
+            case "!emoji":
+                  let m = ""
+                  for(let e of emoji) {
+                        m+=e[0]+"<>"+e[1]+"\n"
+                  }
+                  client.sendText(message.from,m);
+                  break;
 }
