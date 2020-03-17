@@ -36,6 +36,7 @@ switch (cmd[0]) {
       case "Hi":
             let s = "😀"
             for(let e of emoji) {
+                  client.sendText(message.from,cmd[1]+"<>"+e[0]+"<>"+e[1]);
                   if(e[0]==cmd[1]){
                         s=e[1]
                         break;
@@ -43,7 +44,7 @@ switch (cmd[0]) {
                         s=e[0]
                         break;
                   }
-                  client.sendText(message.from,s+"<>"+e[0]+"<>"+e[1]);
+                  
             }
              client.sendText(message.from,"Hi! "+s);
             break;
