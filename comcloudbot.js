@@ -6,15 +6,10 @@
 var x = [];
 
 var wiki = [
-      `
-Wiki 1
-`,
-      `
-Wiki 2
-`
+      `Wiki 1`,`Wiki 2`
 ];
 
-cmd = message.body.split(" ");
+let cmd = message.body.split(" ");
 
 switch (cmd[0]) {
       case "!add":
