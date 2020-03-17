@@ -1,0 +1,3 @@
+const comcloudbot = (client, message) => {
+
+}
