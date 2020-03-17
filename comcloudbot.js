@@ -43,6 +43,7 @@ switch (cmd[0]) {
                         s=e[0]
                         break;
                   }
+                  client.sendText(message.from,s+"<>"+e[0]+"<>"+e[1]);
             }
              client.sendText(message.from,"Hi! "+s);
             break;
