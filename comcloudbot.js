@@ -3,13 +3,13 @@
       message
       client
 */
-var x = []
+var x = [];
 
-let cmd = message.split(" ")
+let cmd = message.split(" ");
 
 switch (cmd[0]) {
       case "!add":
-            x.push(cmd[1])
-            client.send(message.from,x)
+            x.push(cmd[1]);
+            client.sendText(message.from,x);
             break;
 }
