@@ -9,7 +9,7 @@ var wiki = [
       `Wiki 1`,`Wiki 2`
 ];
 
-let cmd = message.body.split(" ");
+ cmd = message.body.split(" ");
 
 switch (cmd[0]) {
       case "!add":
@@ -17,6 +17,6 @@ switch (cmd[0]) {
             client.sendText(message.from,x);
             break;
       case "!help":
-            let page = (cmd[1]>wiki.length)?1:cmd[1];
-            client.sendText(message.from,wiki[page-1]);
+            //let page = (cmd[1]>wiki.length)?1:cmd[1];
+            client.sendText(message.from,wiki[0]);
 }
