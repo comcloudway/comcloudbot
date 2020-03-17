@@ -9,7 +9,7 @@
 if(data.store==undefined) data.store = {};
 
 var wiki = [
-      `Wiki 1\ntest`,`Wiki 2`
+      `Wiki 1\n !emoji - Emoji Liste`,`Wiki 2`
 ];
 
 var emoji = [
