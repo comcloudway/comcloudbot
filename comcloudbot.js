@@ -1,7 +1,9 @@
 /*
       Node Sandbox
-      message
-      client
+      message{}
+      client{}
+      data{}
+      cmd[]
 */
 
 var wiki = [
