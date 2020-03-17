@@ -3,7 +3,6 @@
       message
       client
 */
-var x = [];
 
 var wiki = [
       `Wiki 1`,`Wiki 2`
@@ -13,8 +12,8 @@ var wiki = [
 
 switch (cmd[0]) {
       case "!add":
-            x.push(cmd[1]);
-            client.sendText(message.from,x);
+            data.store.push(x)
+            client.sendText(message.from,JSON.stringify(data));
             break;
       case "!help":
             let page = (cmd[1]>wiki.length)?1:cmd[1];
