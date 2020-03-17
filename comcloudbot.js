@@ -14,7 +14,7 @@ Wiki 2
 `
 ];
 
-let cmd = message.split(" ");
+let cmd = message.body.split(" ");
 
 switch (cmd[0]) {
       case "!add":
