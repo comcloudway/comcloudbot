@@ -14,7 +14,7 @@ var wiki = [
 
 switch (cmd[0]) {
       case "!add":
-            data.store+=x
+            data.store+=cmd[1]
             client.sendText(message.from,data.store);
             break;
       case "!help":
