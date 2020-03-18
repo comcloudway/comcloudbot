@@ -2,11 +2,12 @@
       Node Sandbox
       message{}
       client{}
-      data{}
+      SANDBOX{}.
+            database{}
       cmd[]
 */
 
-if(data.store==undefined) data.store = {};
+
 
 var wiki = [
       `Wiki 1\n !emoji - Emoji Liste\n !spam [anz] [txt] - Spamm`,`Wiki 2`
