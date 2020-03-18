@@ -9,14 +9,13 @@
 if(data.store==undefined) data.store = {};
 
 var wiki = [
-      `Wiki 1\n !emoji - Emoji Liste`,`Wiki 2`
+      `Wiki 1\n !emoji - Emoji Liste\n !spam [anz] [txt] - Spamm`,`Wiki 2`
 ];
 
 var emoji = [
       ["😇","😈"],
       ["🥶","🥵"],
       ["😠","😂"],
-      ["🤦‍♀️","🤦‍♂️"],
       ["🤬","🤣 "],
       ["😁","☹️"],
       ["😖","😄"],
@@ -24,7 +23,7 @@ var emoji = [
       ["😏","😒"],
       ["🥴","😜"]
 ]
-
+if(message.body!=undefined) {
  cmd = message.body.split(" ");
 
 switch (cmd[0]) {
@@ -54,4 +53,12 @@ switch (cmd[0]) {
                   }
                   client.sendText(message.from,m);
                   break;
+                  case "!spam":
+                        let n = message.from.split("@")[0];
+
+                        for(let i = 0; i++; i<= (cmd[1]>10)?10:cmd[1]) {
+                              client.sendText(n,(cmd[2]!=undefined)?cmd[2]:"Hi!");
+                        }
+                        break;
+}
 }
