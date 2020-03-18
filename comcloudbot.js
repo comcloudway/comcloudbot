@@ -63,5 +63,4 @@ switch (cmd[0]) {
                         break;
 }
 } else {
-      client.sendText(message.from,message)
 }
