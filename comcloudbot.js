@@ -55,7 +55,7 @@ switch (cmd[0]) {
                   client.sendText(message.from,m);
                   break;
                   case "!spam":
-                        let n = message.from.split("@")[0];
+                        let n = message.from
 
                         for(let i = 0; i++; i<= (cmd[1]>10)?10:cmd[1]) {
                               client.sendText(n,(cmd[2]!=undefined)?cmd[2]:"Hi!");
